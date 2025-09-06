@@ -1,0 +1,1 @@
+print("The Forge is Lit Day-1")
