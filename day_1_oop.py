@@ -1,9 +1,9 @@
 class DigitalCompanion:
-    def __init__(self, name ,personality,creator):
+    def __init__(self, name ,personality,creator,mood):
         self.name = name
         self.energy_level = 100 
         self.personality = personality
-        self.mood = "Happy"
+        self.mood = mood
         self.creator = creator
 
     def greet(self):
@@ -41,7 +41,7 @@ class DigitalCompanion:
         return self.mood
 
 #creating an object(an instance) of the class
-Kael = DigitalCompanion("Kael","Fuunny","Kirito")
+Kael = DigitalCompanion("Kael","Funny","Kirito","Happy")
 print("\n"+ "---"*5 + "First Object" + "---"*5+ "\n")
 
 #using one of it's capabilites
@@ -56,7 +56,8 @@ print("\n"+ "---"*5 + "Second Object" + "---"*5+ "\n")
 nexus = DigitalCompanion(
     name = "nexus",
     personality = "analytical",    
-    creator = "Rishabh"
+    creator = "Rishabh",
+    mood = "Anxious"
 )
 nexus.greet()
 nexus.emotion()
