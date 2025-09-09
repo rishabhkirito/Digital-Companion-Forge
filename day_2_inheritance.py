@@ -42,6 +42,7 @@ class DigitalCompanion:
 class codingComapanion(DigitalCompanion):
     def __init__(self,name,creator,known_languages):
         super().__init__(name=name,creator=creator,personality = "Coder")
+        super().set_mood("Innovation")
 
         self.known_languages = known_languages
 
