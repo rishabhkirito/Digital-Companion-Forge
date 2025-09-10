@@ -39,6 +39,10 @@ class DigitalCompanion:
     def get_mood(self):
         return self.mood
     
+    def introduce(self):
+        print(f"{self.name}: I am your general purpose DigitalCompanion")
+
+    
 class codingComapanion(DigitalCompanion):
     def __init__(self,name,creator,known_languages):
         super().__init__(name=name,creator=creator,personality = "Coder")
@@ -51,6 +55,9 @@ class codingComapanion(DigitalCompanion):
             print(f"{language} is the coding language used by{self.name}")
         else:
             print(f"{self.name} hasn't learnt to code in this language yet")
+
+    def introduce(self):
+        print(f"{self.name}: I am here to help you code")
         
 class GamingCompanion(DigitalCompanion):
     def __init__(self,name,creator,favourite_game):
@@ -64,6 +71,9 @@ class GamingCompanion(DigitalCompanion):
         else:
             print(f"{self.name} has skill issues in this game")
 
+    def introduce(self):
+        print(f"{self.name}: Let's game and rule the world")
+
 blaze = codingComapanion(name = "blaze",creator = "Kirito",known_languages = ["Python","TypeScript"])
 blaze.write_code("Python")
 blaze.write_code("TypeScript")
@@ -74,3 +84,8 @@ powder = GamingCompanion(name="powder",creator="kirito",favourite_game="Insomani
 powder.game_mode("Insomaniac Spider-Man")
 powder.game_mode("Metro Exodus")
 
+Dom = DigitalCompanion(name = "Dom", creator = "Kirito", personality="Sassy")
+Companions = [blaze,powder,Dom]
+
+for companion in Companions:
+    companion.introduce()
