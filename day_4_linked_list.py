@@ -25,10 +25,25 @@ class LinkedList:
         while curr:
             elements.append(str(curr.data))
             curr = curr.next
-        print("->".join(elements)+"None")
+        print("->".join(elements)+"-> None")
+
+    def reverse(self):
+        prev_node = None
+        curr_node = self.head
+        while curr_node is not None:
+            next_node = curr_node.next
+            curr_node.next = prev_node
+            prev_node = curr_node
+            curr_node = next_node
+        self.head = prev_node   
+        
+
 
 my_list = LinkedList()
 my_list.connection(10)
 my_list.connection(11)
 my_list.connection(7)
+my_list.display()
+my_list.reverse()
+print("reversed List")
 my_list.display()
