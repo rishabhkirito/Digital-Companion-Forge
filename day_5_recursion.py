@@ -2,7 +2,9 @@ def recursion(s):
     if len(s) <= 1:
         return s
     
-    return recursion(s[1:]) + s[0]
+    return (s[1:]) + s[0]
    
-print(recursion("hallauha"))
-print(f"the reverse of hello is {recursion("hello")}")
+recursion_word = input("enter a word: ")
+if recursion_word == exit:
+    exit
+print(recursion(recursion_word))
